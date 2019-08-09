@@ -1,14 +1,10 @@
 package com.sendtomoon.dubboCloud;
 
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
 import org.apache.dubbo.common.utils.ConfigUtils;
 import org.apache.dubbo.common.utils.StringUtils;
 import org.springframework.context.SmartLifecycle;
@@ -31,7 +27,6 @@ public class InitialDubbo implements SmartLifecycle {
 			try {
 				this.getDefPro();
 			} catch (FileNotFoundException e) {
-				e.printStackTrace();
 				System.err.println("can't find any propertie file!");
 			} catch (IOException e) {
 				e.printStackTrace();
